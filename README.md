@@ -1,1 +1,1 @@
-# mniudanri.github.io
+Personal website resources.
