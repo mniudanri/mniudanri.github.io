@@ -1,0 +1,253 @@
+/* Container styling */
+.tree-container {
+  background: #ffffff;              /* white background */
+  border: 1px solid #ddd;           /* subtle border */
+  border-radius: 8px;               /* rounded corners */
+  padding: 20px;                    /* inner spacing */
+  margin: 30px 0;                   /* spacing from other sections */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* soft shadow */
+}
+
+/* Folder tree inside container */
+.folder-tree {
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+/* Remove list bullets */
+.folder-tree ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Toggle arrows */
+.folder-tree .tree-toggle {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.folder-tree .tree-toggle::before {
+  content: "▸ ";
+}
+
+.folder-tree .tree-toggle.open::before {
+  content: "▾ ";
+}
+
+/* Nested folders hidden by default */
+.folder-tree .nested {
+  display: none;
+}
+
+.folder-tree .nested.active {
+  display: block;
+}
+
+/* Table container */
+.table-container {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Table styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Header */
+.data-table thead {
+  background: #f5f5f5;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Body rows */
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hover effect */
+.data-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+details.sql-block {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ecf0f1;
+  color: #000000;
+  padding: 4px;
+  max-width: none;
+  width: 99%;
+}
+
+details.sql-block summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+code.language-sql {
+  font-family: Consolas, monospace;
+  color: #f8f8f2;
+}
+
+/* Collapsible code block container */
+details.code-block {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* background: #2c3e50; */
+  background: #ecf0f1;
+  /* color: #ecf0f1; */
+  color: #000000;
+  padding: 4px;
+  max-width: none;   /* limit width */
+  width: 99%;
+}
+
+/* Summary line */
+details.code-block summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* Code area */
+details.code-block pre {
+  margin: 0;
+  padding: 10px;
+  background: #2b2f31;
+  border-radius: 4px;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre;
+}
+
+/* Code block */
+pre {
+  margin: 0;
+  padding: 10px;
+  background: #1e272e;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, monospace;
+  color: #00e0ff;
+}
+
+/* TEST */
+/* Collapsible code block container */
+details.code-bash {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* background: #2c3e50; */
+  background: #ecf0f1;
+  /* color: #ecf0f1; */
+  color: #000000;
+  padding: 4px;
+  max-width: none;   /* limit width */
+  width: 99%;
+}
+
+/* Summary line */
+details.code-bash summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+code.language-bash {
+  font-family: Consolas, monospace;
+  color: #f8f8f2;
+}
+/* Style the fake terminal prompt */
+.command-line-prompt {
+  color: #27ae60;              /* green like a terminal */
+  font-weight: bold;
+  font-family: Consolas, monospace;
+}
+
+/* Style the whole command-line block */
+pre[class*="command-line"] {
+  background: #2d2d2d;         /* dark terminal background */
+  color: #f8f8f2;              /* light text for commands */
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+/* Ensure commands stay white */
+pre[class*="command-line"] code {
+  color: #f8f8f2;
+}
+
+/* Remove the vertical cursor line */
+pre[class*="command-line"] .command-line-prompt > span:before {
+  content: none !important;
+  display: none !important;
+}
+/* TEST */
+
+/* Inline code */
+p code {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+/* Terminal-style block */
+.code-container {
+  position: relative;
+}
+
+/* Copy button */
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  background: #2980b9;
+}
+
+/* Terminal block */
+pre.terminal {
+  background-color: #1e1e1e;
+  color: #00ff9c;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: Consolas, "Courier New", monospace;
+  overflow-x: auto;
+  margin: 0;
+}
