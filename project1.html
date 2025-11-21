@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My GitHub Page</title>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Prism -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js"></script>
+
+    <!-- custom -->
+    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/codes.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Projects</h2>
+    <ul class="tree">
+      <li>
+        <span class="toggle">📂 Web Development ▸</span>
+        <ul class="nested">
+          <li>📄 <a href="project1.html">Portfolio Website</a></li>
+          <li>📄 <a href="project2.html">Blog Platform</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="toggle">📂 Data Science ▸</span>
+        <ul class="nested">
+          <li>📄 <a href="project3.html">Data Visualization</a></li>
+          <li>📄 <a href="project4.html">Machine Learning Demo</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="toggle">📂 Other Experiments ▸</span>
+        <ul class="nested">
+          <li>📄 <a href="project5.html">AI Chatbot</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Toggle button OUTSIDE sidebar -->
+  <button id="menu-toggle">✖</button>
+
+  <main>
+    <div class="title-page">
+      <h1>This is Project 1</h1>
+    </div>
+    <section class="portfolio">
+        <h1>Code Block & Formatting Demo</h1>
+
+        <!-- Collapsible code block -->
+        <details class="code-block">
+            <summary>Show/Hide Example Code</summary>
+            <div class="code-container">
+                <button class="copy-btn">Copy</button>
+                <pre class="line-numbers"><code class="language-javascript">// Simple JavaScript function
+function greet(name) {
+  return "Hello, " + name + "!";
+}</code></pre>
+            </div>
+        </details>
+
+        <details class="code-bash">
+            <summary>Show/Hide Example Code</summary>
+            <div class="code-container">
+                <button class="copy-btn">Copy</button>
+                <!-- <pre class="command-line" data-user="user" data-host="server"><code class="language-bash"> -->
+                    <pre class="command-line" data-prompt="$"><code class="language-bash"># comment
+echo "Deploying app..."
+git pull origin main
+npm run build</code></pre>
+            </div>
+        </details>
+
+        <br/>
+
+        <details class="sql-block">
+  <summary>Show/Hide SQL Code</summary>
+  <div class="code-container">
+    <!-- Copy button -->
+    <button class="copy-btn">Copy</button>
+
+    <pre class="line-numbers"><code class="language-sql">
+-- Create a users table
+CREATE TABLE users (
+  id INT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  role VARCHAR(50)
+);
+
+-- Insert dummy data
+INSERT INTO users (id, name, email, role)
+VALUES (1, 'Alice', 'alice@example.com', 'Developer');
+    </code></pre>
+  </div>
+</details>
+
+
+
+        <!-- Inline code -->
+        <p>Use inline code like <code class="language-javascript">console.log("Hello World")</code> inside text.</p>
+
+        <!-- Centered image -->
+        <div class="image-container center">
+            <img src="assets/images/profile.png" alt="Profile photo">
+        </div>
+
+        <!-- Left-aligned image -->
+        <div class="image-container left">
+            <img src="assets/images/profile.png" alt="Project screenshot">
+        </div>
+
+        <!-- Text formatting -->
+        <p>
+            <strong>Bold text</strong><br>
+            <u>Underlined text</u><br>
+            <s>Strikethrough text</s>
+        </p>
+    </section>
+
+    <div class="tree-container">
+  <h2>Project Structure</h2>
+  <section class="folder-tree">
+    <ul>
+      <li>
+        <span class="tree-toggle">📁 src</span>
+        <ul class="nested">
+          <li><span>📄 index.html</span></li>
+          <li><span>📄 style.css</span></li>
+          <li>
+            <span class="tree-toggle">📁 js</span>
+            <ul class="nested">
+              <li><span>📄 script.js</span></li>
+              <li><span>📄 utils.js</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span>📄 README.md</span></li>
+      <li><span>📄 package.json</span></li>
+    </ul>
+  </section>
+</div>
+
+<div class="table-container">
+  <h2>Dummy Data Table</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Alice</td>
+        <td>Developer</td>
+        <td>Active</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Bob</td>
+        <td>Designer</td>
+        <td>Inactive</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Charlie</td>
+        <td>Manager</td>
+        <td>Active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+    <section class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="assets/images/profile.png" alt="Portfolio Website">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="assets/images/profile.png" alt="Blog Platform">
+            <h3>Blog Platform</h3>
+            <p>A simple blogging platform with Markdown support and user authentication.</p>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="assets/images/profile.png" alt="Data Visualization">
+            <h3>Data Visualization</h3>
+            <p>Interactive charts and graphs using D3.js and Chart.js.</p>
+        </div>
+    </section>
+  </main>
+  </body>
+</html>
